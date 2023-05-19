@@ -1,4 +1,7 @@
 import pokemon_logo from "./pokemon_logo.jpg";
+// import mySvg from "./logo.svg";
+// import logo from "./logo.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -26,6 +29,10 @@ function App() {
 
   useEffect(() => {
     fetchInfo();
+    console.log(data);
+    console.log(data.name);
+    console.log(data.abilities);
+    console.log(data.abilities[0].ability.name);
   }, []);
 
   return (
@@ -39,17 +46,18 @@ function App() {
           {/* <Navigate to="/" /> */}
         </Routes>
       </Router>
-      <Footer />
-
       <div className="App">
         {/* <header className="App-header"> */}
-        {/* <img src={pokemon_logo} className="App-logo1" alt="logo1" /> */}
+        <img src={pokemon_logo} className="App-logo1" alt="logo1" />
+        {/* <img src="./logo.svg" className="App-logo1" alt="logo1" /> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p>
           Text <code>src/App.js</code> text text text.
-        </p>
+  </p>*/}
         <p>Name: {data.name}</p>
         <p>Base Experience: {data.base_experience}</p>
-  <p>Weight: {data.weight}</p>*/}
+        <p>Weight: {data.weight}</p>
+        <p>Abilities: {data.abilities[0].ability.name}</p>
         {/* <a
           className="App-link"
           href="https://reactjs.org"
@@ -61,6 +69,7 @@ function App() {
         {/* </header> */}
         {/* <Home /> */}
       </div>
+      <Footer />
     </>
   );
 }

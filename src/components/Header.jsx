@@ -1,5 +1,6 @@
 import React from "react";
 import pokemon_logo from "./pokemon_logo.jpg";
+// import pokemon_logo from "./International_Pokémon_logo.svg";
 
 const Header = () => {
   return (
