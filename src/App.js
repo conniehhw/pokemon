@@ -1,7 +1,7 @@
 import pokemon_logo from "./pokemon_logo.jpg";
 // import mySvg from "./logo.svg";
 // import logo from "./logo.svg";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -18,7 +18,7 @@ import Footer from "./components/Footer";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  const url = "https://pokeapi.co/api/v2/pokemon/clefairy";
+  const url = "https://pokeapi.co/api/v2/pokemon/jigglypuff";
   const [data, setData] = useState([]);
 
   const fetchInfo = () => {
@@ -32,7 +32,7 @@ function App() {
     console.log(data);
     console.log(data.name);
     console.log(data.abilities);
-    console.log(data.abilities[0].ability.name);
+    // console.log(data.abilities[0].ability.name);
   }, []);
 
   return (
@@ -57,7 +57,7 @@ function App() {
         <p>Name: {data.name}</p>
         <p>Base Experience: {data.base_experience}</p>
         <p>Weight: {data.weight}</p>
-        <p>Abilities: {data.abilities[0].ability.name}</p>
+        {/* <p>Abilities: {data.abilities[1].ability.name}</p> */}
         {/* <a
           className="App-link"
           href="https://reactjs.org"
