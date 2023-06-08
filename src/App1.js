@@ -12,6 +12,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 // import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { LoremIpsum } from "react-lorem-ipsum";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,10 +24,15 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Home1 from "./components/Home1";
 import Something from "./components/Something";
-// import { Pokedex } from "./components/Pokedex";
+import Pokedex from "./components/Pokedex";
 // import { Madlibs } from "./components/Madlibs";
 
 function App1() {
+  const client = new ApolloClient({
+    uri: "https://beta.pokeapi.co/graphql/v1beta",
+    cache: new InMemoryCache(),
+  });
+
   return (
     // <BrowserRouter>
     <Router>
@@ -47,9 +53,9 @@ function App1() {
                   </Nav.Link>
                   <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item
-                      // as={Link}
-                      // to="/pokedex"
-                      href="#action/3.1"
+                      as={Link}
+                      to="/pokedex"
+                      // href="#action/3.1"
                     >
                       Pokedex
                     </NavDropdown.Item>
@@ -63,7 +69,7 @@ function App1() {
                     <NavDropdown.Item
                       as={Link}
                       to="/something"
-                      href="#action/3.3"
+                      // href="#action/3.3"
                     >
                       Something
                     </NavDropdown.Item>
@@ -71,7 +77,7 @@ function App1() {
                     <NavDropdown.Item
                       as={Link}
                       to="/contact"
-                      href="#action/3.4"
+                      // href="#action/3.4"
                     >
                       Contact
                     </NavDropdown.Item>
@@ -83,97 +89,15 @@ function App1() {
           <div>
             <Routes>
               <Route path="/about" element={<About />} />
-              {/* <Route path="/pokedex" element={<Pokedex />} />
-              <Route path="/madlibs" element={<Madlibs />} /> */}
+              <Route path="/pokedex" element={<Pokedex />} />
+              {/*<Route path="/madlibs" element={<Madlibs />} /> */}
               <Route path="/something" element={<Something />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home1 />} />
             </Routes>
           </div>
         </header>
-        <main>
-          {/* <Home1 /> */}
-          {/* <Container>
-            <Row className="px-4 my-5">
-              <Col sm={7}>
-                <Image
-                  // src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg"
-                  src="https://picsum.photos/900/400"
-                  fluid
-                  rounded
-                  classNmame=""
-                />
-              </Col>
-              <Col sm={5}>
-                <h1 class="font-weigh-light">Tagline</h1>
-                <p class="mt-4">
-                  <LoremIpsum
-                    p={1}
-                    avgWordsPerSentence={6}
-                    avgSentencesPerParagraph={3}
-                  />
-                </p>
-                <Button variant="outline-primary">Call to Action</Button>
-              </Col>
-            </Row>
-            <Card className="text-center bg-secondary text-white my-5 py-4">
-              <Card.Body>
-                This is some text within a card body. This is some text within a
-                card body.{" "}
-              </Card.Body>
-            </Card>
-            <Row>
-              <Col>
-                <Card style={{ width: "18rem" }}>
-                  <Card.Img
-                    variant="top"
-                    src="https://picsum.photos/id/201/320/200"
-                  />
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col>
-                <Card style={{ width: "18rem" }}>
-                  <Card.Img
-                    variant="top"
-                    src="https://picsum.photos/id/220/320/200"
-                  />
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col>
-                <Card style={{ width: "18rem" }}>
-                  <Card.Img
-                    variant="top"
-                    src="https://picsum.photos/id/221/320/200"
-                  />
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Container> */}
-        </main>
+        <main></main>
         <footer class="py-5 my-5 bg-dark">
           <Container className="px-4">
             <p class="text-center text-white">
