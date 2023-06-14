@@ -1,5 +1,5 @@
 import React from "react";
-import "./App1.css";
+import "./App.css";
 // import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -25,7 +25,7 @@ import Contact from "./components/Contact";
 import Home1 from "./components/Home1";
 import Something from "./components/Something";
 import Pokedex from "./components/Pokedex";
-// import { Madlibs } from "./components/Madlibs";
+import MadLibs from "./components/MadLibs";
 
 function App1() {
   const client = new ApolloClient({
@@ -40,7 +40,7 @@ function App1() {
         <header>
           <Navbar bg="light" expand="lg">
             <Container>
-              <Navbar.Brand>Navbar</Navbar.Brand>
+              <Navbar.Brand>Pokemon</Navbar.Brand>
               {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -60,9 +60,9 @@ function App1() {
                       Pokedex
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      // as={Link}
-                      // to="/madlibs"
-                      href="#action/3.2"
+                      as={Link}
+                      to="/madlibs"
+                      // href="#action/3.2"
                     >
                       Mad Libs
                     </NavDropdown.Item>
@@ -90,7 +90,7 @@ function App1() {
             <Routes>
               <Route path="/about" element={<About />} />
               <Route path="/pokedex" element={<Pokedex />} />
-              {/*<Route path="/madlibs" element={<Madlibs />} /> */}
+              <Route path="/madlibs" element={<MadLibs />} />
               <Route path="/something" element={<Something />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home1 />} />
