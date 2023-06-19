@@ -20,6 +20,9 @@ import {
   Link,
   // Navigate,
 } from "react-router-dom";
+
+import pokemonlogo from "./components/pokemon-logo.png";
+import Image from "react-bootstrap/Image";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home1 from "./components/Home1";
@@ -38,9 +41,17 @@ function App1() {
     <Router>
       <div className="App1">
         <header>
-          <Navbar bg="light" expand="lg">
+          <Navbar bg="white" expand="lg" sticky="top">
             <Container>
-              <Navbar.Brand>Pokemon</Navbar.Brand>
+              <Navbar.Brand>
+                <Image
+                  src={pokemonlogo}
+                  fluid
+                  rounded
+                  className="pokemon__logo"
+                />
+              </Navbar.Brand>
+              {/* <Navbar.Brand>Pokemon</Navbar.Brand> */}
               {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -51,7 +62,7 @@ function App1() {
                   <Nav.Link as={Link} to="/about">
                     About
                   </Nav.Link>
-                  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                  <NavDropdown title="Explore" id="basic-nav-dropdown">
                     <NavDropdown.Item
                       as={Link}
                       to="/pokedex"
@@ -71,7 +82,7 @@ function App1() {
                       to="/something"
                       // href="#action/3.3"
                     >
-                      Something
+                      Resources for Parents and Caregivers
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item

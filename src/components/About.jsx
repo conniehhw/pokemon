@@ -16,22 +16,29 @@ const About = () => {
           <Col sm={7}>
             <Image
               // src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg"
-              src="https://picsum.photos/900/400"
+              src="https://picsum.photos/900/900"
               fluid
               rounded
               classNmame=""
             />
           </Col>
           <Col sm={5}>
-            <h1 class="font-weigh-light">Tagline</h1>
+            <h1 class="font-weigh-light">For the Littler Pokemon Fan</h1>
             <p class="mt-4">
               {/* mt= margin top */}
-              <LoremIpsum
+              {/* <LoremIpsum
                 p={1}
                 avgWordsPerSentence={6}
                 avgSentencesPerParagraph={3}
-              />
+              /> */}
             </p>
+            <p>
+              Hello! This site is designed for the littler pokemon fans AND
+              their newbie parents caregivers unindated with Pokemon questions.
+              Pokemon fans range from little ones to adults - this site has
+              simple games and resources for the littler fan.
+            </p>
+            <br></br>
             <Button variant="outline-primary">Call to Action</Button>
           </Col>
         </Row>
