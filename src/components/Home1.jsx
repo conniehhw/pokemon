@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Card from "react-bootstrap/Card";
-import Welcome from "./welcome-group.png";
+import Welcome from "./welcome.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LoremIpsum } from "react-lorem-ipsum";
 
@@ -17,10 +17,11 @@ const Home1 = () => {
     <main className="App-home">
       <Container
         style={{
-          backgroundColor: "blue",
+          backgroundColor: "#CC0000",
         }}
+        class="w-auto"
       >
-        <Row className="px-4 my-5 border border-dark">
+        <Row className="px-4 my-2 border border-dark">
           {/* px = padding, my=margin */}
           <Col sm={7} className="border border-dark">
             {/* className="justify-content-md-center"> */}
@@ -55,9 +56,9 @@ const Home1 = () => {
 
       <Container
         style={{
-          backgroundColor: "blue",
+          backgroundColor: "#3B4CCA",
         }}
-        class="mx-auto"
+        class="w-auto"
       >
         <div className="justify-content-evenly flex-wrap">
           {/* <Card className="text-center bg-secondary text-white my-5 py-4">
