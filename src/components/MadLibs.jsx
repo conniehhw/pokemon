@@ -56,7 +56,8 @@ class MadLibs extends Component {
 
   changeMadlibSelection(event) {
     console.log(event.target.value);
-    //   selectedMadLib: MadLibs(event.target.value),
+    // this.setState((
+    //   selectedMadLib: MadLibs(event.target.value)))
     // });
   }
 
