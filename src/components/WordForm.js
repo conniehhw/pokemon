@@ -12,26 +12,26 @@ class WordForm extends Component {
   }
 
   // opens new empty array to be populated, grabs each word and push an input text,
-  //   createAllInputs() {
-  //     let output = [];
+  createAllInputs() {
+    let output = [];
 
-  //     for (let i = 0; i < this.props.words.length; i++) {
-  //       let word = this.props.words[i];
-  //       output.push(
-  //         <div>
-  //           <input
-  //             onChange={(event) => this.onInputChange(event, word.key, i)}
-  //             type="text"
-  //             key={word.key}
-  //             placeholder={word.label}
-  //           ></input>
-  //           <br></br>
-  //         </div>
-  //       );
-  //     }
+    for (let i = 0; i < this.props.words.length; i++) {
+      let word = this.props.words[i];
+      output.push(
+        <div>
+          <input
+            onChange={(event) => this.onInputChange(event, word.key, i)}
+            type="text"
+            key={word.key}
+            placeholder={word.label}
+          ></input>
+          <br></br>
+        </div>
+      );
+    }
 
-  //     return output;
-  //   }
+    return output;
+  }
 
   render() {
     // function here
@@ -41,7 +41,7 @@ class WordForm extends Component {
     return (
       <div>
         <h1>This is the word form</h1>
-        {/* {this.createAllInputs()} */}
+        {this.createAllInputs()}
       </div>
     );
   }
