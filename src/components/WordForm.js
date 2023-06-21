@@ -5,6 +5,7 @@ import React, { Component } from "react";
 // calls on InputChange() when change event occurs and pass in appropriate arguments expected
 class WordForm extends Component {
   onInputChange(event, key, index) {
+    //   onInputChange(key, event, index) {
     // console.log(event.target.value);
     // console.log(key);
     // console.log(index);
@@ -36,7 +37,6 @@ class WordForm extends Component {
   render() {
     // function here
     console.log(this.props.words);
-    // console.log("Hello");
 
     return (
       <div>

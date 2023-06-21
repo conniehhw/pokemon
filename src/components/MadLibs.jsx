@@ -7,7 +7,7 @@ import MadLibsGen from "./MadLibsGen.js";
 class MadLibs extends Component {
   state = {
     madlibsgen: MadLibsGen,
-    selectedMadLibGen: MadLibsGen[0],
+    selectedMadLibGen: MadLibsGen[1],
     // selectedMadLibGen: MadLibsGen[0],
   };
 
@@ -17,9 +17,9 @@ class MadLibs extends Component {
 
   // Override current state (setState, newState?) spread operator line 17 = lines 9 - 10
   onWordInputChange = (key, value, index) => {
-    // console.log(key);
-    // console.log(value);
-    // console.log(index);
+    console.log(key);
+    console.log(value);
+    console.log(index);
 
     // const newState is a copy of the oldState and spreading it across, newState has selected Madlibs (which story)
     const newState = {
@@ -38,8 +38,8 @@ class MadLibs extends Component {
       if (!this.state.selectedMadLibGen.words[i].value) {
         return false;
       }
-      return true;
     }
+    return true;
   }
 
   // Create select dropdown to allow user to switch selected MadLib to play
@@ -56,24 +56,27 @@ class MadLibs extends Component {
 
   changeMadlibSelection(event) {
     console.log(event.target.value);
-    // this.setState((
-    //   selectedMadLib: MadLibs(event.target.value)))
+    // this.setState({
+    //   selectedMadLibgen: MadLibsGen[event.target.value],
     // });
   }
 
-  // upon selection of Madlib, changeMadlibSelection is called
+  // upon selection of Madlib (onChange), this.changeMadlibSelection is called
   render() {
-    console.log(this.state.selectedMadLib);
+    console.log(this.state.selectedMadLibGen);
 
     return (
       <div className="MadLibs">
         <h1>Mad Libs page</h1>
         <h2>Select a Madlib</h2>
+
         <select onChange={(e) => this.changeMadlibSelection(e)}>
-          {this.createMadlibDropdown()}
+          {this.createMadlibDropdown()}{" "}
         </select>
 
-        {/* {!this.state.selectedMadLibGen ? this.createMadLibDropDown() : null} */}
+        {/* {!this.state.selectedMadLibGen ? this.createMadlibDropdown() : null} */}
+        {/* // if has someting selcted then don'm tdo anything otherwise create the drop down */}
+
         <WordForm
           words={this.state.selectedMadLibGen.words}
           onInputChange={this.onWordInputChange}
@@ -85,15 +88,5 @@ class MadLibs extends Component {
     );
   }
 }
-
-// const MadLibs = () => {
-//   return (
-//     <main className="App-home">
-//       <div>Mad Libs page</div>
-
-//       <WordForm />
-//     </main>
-//   );
-// };
 
 export default MadLibs;
