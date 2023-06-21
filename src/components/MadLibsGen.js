@@ -113,4 +113,28 @@ export default [
       },
     ],
   },
+  {
+    title: "Story 3",
+    getWord: function (key) {
+      return this.words.find((word) => {
+        return word.key === key;
+      }).value;
+    },
+    getText: function () {
+      return `Testing ${this.getWord("verb_1")} Testing ${this.getWord(
+        "adjective_1"
+      )} Testing. `;
+    },
+
+    words: [
+      {
+        key: "verb_1",
+        label: "Verb 1",
+      },
+      {
+        key: "adjective_1",
+        label: "Adjective 1",
+      },
+    ],
+  },
 ];

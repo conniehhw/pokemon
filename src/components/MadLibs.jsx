@@ -7,13 +7,12 @@ import MadLibsGen from "./MadLibsGen.js";
 class MadLibs extends Component {
   state = {
     madlibsgen: MadLibsGen,
-    selectedMadLibGen: MadLibsGen[1],
-    // selectedMadLibGen: MadLibsGen[0],
+    selectedMadLibGen: MadLibsGen[0],
   };
 
   // state = {
-  //   selectedMadLibGen: null
-  // }
+  //   selectedMadLibGen: null,
+  // };
 
   // Override current state (setState, newState?) spread operator line 17 = lines 9 - 10
   onWordInputChange = (key, value, index) => {
@@ -55,10 +54,10 @@ class MadLibs extends Component {
   }
 
   changeMadlibSelection(event) {
-    console.log(event.target.value);
-    // this.setState({
-    //   selectedMadLibgen: MadLibsGen[event.target.value],
-    // });
+    // console.log(event.target.value);
+    this.setState({
+      selectedMadLibGen: MadLibsGen[event.target.value],
+    });
   }
 
   // upon selection of Madlib (onChange), this.changeMadlibSelection is called
@@ -71,7 +70,8 @@ class MadLibs extends Component {
         <h2>Select a Madlib</h2>
 
         <select onChange={(e) => this.changeMadlibSelection(e)}>
-          {this.createMadlibDropdown()}{" "}
+          {this.createMadlibDropdown()}
+          {/* {" "} */}
         </select>
 
         {/* {!this.state.selectedMadLibGen ? this.createMadlibDropdown() : null} */}
