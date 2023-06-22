@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Card from "react-bootstrap/Card";
-import Welcome from "./welcome.png";
+import Welcome from "./pikachu-ash.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { LoremIpsum } from "react-lorem-ipsum";
 
@@ -17,9 +17,10 @@ const Home1 = () => {
     <main className="App-home">
       <Container
         style={{
-          backgroundColor: "#CC0000",
+          backgroundColor: "#FFDE00",
         }}
         class="w-auto"
+        fluid
       >
         <Row className="px-4 my-2 border border-dark">
           {/* px = padding, my=margin */}
@@ -36,9 +37,9 @@ const Home1 = () => {
             />
             {/* mt-4 me-4 ms-4 */}
           </Col>
-          <Col sm={5} className="border border-dark text-white">
+          <Col sm={5} className="border border-dark text-black">
             <h1 class="font-weigh-light" className="mt-4">
-              Tagline
+              Welcome!
             </h1>
             <p class="mt-4">
               {/* mt= margin top */}
@@ -49,7 +50,7 @@ const Home1 = () => {
               />
             </p>
             <br></br>
-            <Button variant="warning">Call to Action</Button>
+            <Button variant="primary">Call to Action</Button>
           </Col>
         </Row>
       </Container>
@@ -59,16 +60,18 @@ const Home1 = () => {
           backgroundColor: "#3B4CCA",
         }}
         class="w-auto"
+        fluidß
       >
-        <div className="justify-content-evenly flex-wrap">
-          {/* <Card className="text-center bg-secondary text-white my-5 py-4">
+        <div className="">
+          <Card className="text-center bg-secondary text-white my-5 py-4 border border-dark">
             <Card.Body>
               This is some text within a card body. This is some text within a
               card body.{" "}
             </Card.Body>
-          </Card> */}
+          </Card>
+
           <Row className="border border-dark">
-            <Col className="border border-dark d-flex justify-content-center">
+            <Col className="border border-dark">
               <Card style={{ width: "18rem" }}>
                 <Card.Img
                   variant="top"
@@ -94,6 +97,7 @@ const Home1 = () => {
                 </Card.Body>
               </Card>
             </Col>
+
             <Col className="border border-dark d-flex justify-content-center">
               <Card style={{ width: "18rem" }}>
                 <Card.Img
@@ -111,6 +115,7 @@ const Home1 = () => {
                 </Card.Body>
               </Card>
             </Col>
+
             <Col className="border border-dark d-flex justify-content-center">
               <Card style={{ width: "18rem" }}>
                 <Card.Img

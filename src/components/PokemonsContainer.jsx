@@ -5,7 +5,7 @@ import { GET_POKEMONS } from "../gql/get-pokemons";
 
 export function PokemonsContainer() {
   const { data: { pokemon_v2_pokemon = [] } = {} } = useQuery(GET_POKEMONS, {
-    variables: { limit: 6 },
+    variables: { limit: 9 },
   });
 
   return (

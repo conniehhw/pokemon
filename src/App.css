@@ -1,6 +1,8 @@
-/* .App {
+/*.App {
   text-align: center;
+
 }
+
 
 .App-logo {
   height: 10vmin;
@@ -59,7 +61,32 @@
   }
 }
 */
-*/
+
+/*  Resets
+=========================================== */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  /* margin: 20px 0;
+  padding: 0 20px; */
+  line-height: 1;
+  font-family: "Segeo UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #202020;
+  background-color: #fbfbfb;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /* POKEMON APPLICATION 
 =========================================== */
@@ -67,6 +94,7 @@
 .container {
   display: flex;
   max-width: 550px;
+  /* max-width: "100%"; */
   margin: auto;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -187,7 +215,15 @@
 
 .container .pokemon__logo {
   padding: 20px;
-  max-height: 125px;
+  max-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .nav_logo {
+  padding: 20px;
+  max-height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
