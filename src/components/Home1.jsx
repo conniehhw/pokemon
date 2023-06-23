@@ -20,7 +20,6 @@ const Home1 = () => {
           backgroundColor: "#FFDE00",
         }}
         class="w-auto"
-        fluid
       >
         <Row className="px-4 my-2 border border-dark">
           {/* px = padding, my=margin */}
@@ -60,7 +59,7 @@ const Home1 = () => {
           backgroundColor: "#3B4CCA",
         }}
         class="w-auto"
-        fluidß
+        fluid
       >
         <div className="">
           <Card className="text-center bg-secondary text-white my-5 py-4 border border-dark">

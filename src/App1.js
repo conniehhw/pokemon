@@ -23,12 +23,14 @@ import {
 
 import pokemonlogo from "./components/pokemon-logo.png";
 import Image from "react-bootstrap/Image";
+import Home1 from "./components/Home1";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Home1 from "./components/Home1";
-import Something from "./components/Something";
+
 import Pokedex from "./components/Pokedex";
 import MadLibs from "./components/MadLibs";
+import Resources from "./components/Resources";
+import Something from "./components/Something";
 
 function App1() {
   const client = new ApolloClient({
@@ -42,13 +44,13 @@ function App1() {
       {/* <div className="App1"> */}
       <header>
         <Navbar
-          bg="dark"
-          variant="dark"
+          bg="white"
+          // variant="dark"
           expand="lg"
           sticky="top"
-          // className="border border-dark"
+          className="border border-dark"
         >
-          <Container className="border border-dark">
+          <Container className="border border-light">
             <Navbar.Brand>
               <Image
                 src={pokemonlogo}
@@ -88,7 +90,7 @@ function App1() {
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     as={Link}
-                    to="/something"
+                    to="/resources"
                     // href="#action/3.3"
                   >
                     Resources for Parents and Caregivers
@@ -96,12 +98,15 @@ function App1() {
                   <NavDropdown.Divider />
                   <NavDropdown.Item
                     as={Link}
-                    to="/contact"
+                    to="/something"
                     // href="#action/3.4"
                   >
-                    Contact
+                    Something
                   </NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link as={Link} to="/contact">
+                  Contact
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -112,6 +117,7 @@ function App1() {
           <Route path="/about" element={<About />} />
           <Route path="/pokedex" element={<Pokedex />} />
           <Route path="/madlibs" element={<MadLibs />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/something" element={<Something />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<Home1 />} />
@@ -120,7 +126,7 @@ function App1() {
 
       {/* <main></main> */}
       <footer class="py-5 mt-5 bg-dark">
-        <Container className="px-4">
+        <Container className="px-4 border border-light">
           <p class="text-center text-white">
             Copyright &copy; Your website 2023
           </p>
