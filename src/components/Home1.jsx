@@ -23,19 +23,7 @@ const Home1 = () => {
       >
         <Row className="px-4 my-2 border border-dark">
           {/* px = padding, my=margin */}
-          <Col sm={7} className="border border-dark">
-            {/* className="justify-content-md-center"> */}
-            <Image
-              // src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg"
-              // src="https://picsum.photos/900/400"
-              src={Welcome}
-              // alt="welcome"
-              fluid
-              rounded
-              className=""
-            />
-            {/* mt-4 me-4 ms-4 */}
-          </Col>
+
           <Col sm={5} className="border border-dark text-black">
             <h1 class="font-weigh-light" className="mt-4">
               Welcome!
@@ -50,6 +38,20 @@ const Home1 = () => {
             </p>
             <br></br>
             <Button variant="primary">Call to Action</Button>
+          </Col>
+
+          <Col sm={7} className="border border-dark">
+            {/* className="justify-content-md-center"> */}
+            <Image
+              // src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg"
+              // src="https://picsum.photos/900/400"
+              src={Welcome}
+              // alt="welcome"
+              fluid
+              rounded
+              // className="main-pic"
+            />
+            {/* mt-4 me-4 ms-4 */}
           </Col>
         </Row>
       </Container>

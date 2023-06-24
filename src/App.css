@@ -196,8 +196,20 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.container .nav_logo {
+</Card.Body
+  > <Card.Footer
+  > <Button
+  type="button"
+  class="btn btn-primary w-100"
+  style= {
+   {
+    width: "16rem";
+  }
+}
+> Go somewhere </Button > </Card.Footer > {
+  /* </Card.Body> */
+}
+</Card > </Col > .container .nav_logo {
   padding: 20px;
   max-height: 150px;
   display: flex;

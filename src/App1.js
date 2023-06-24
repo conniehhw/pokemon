@@ -31,6 +31,7 @@ import Pokedex from "./components/Pokedex";
 import MadLibs from "./components/MadLibs";
 import Resources from "./components/Resources";
 import Something from "./components/Something";
+import TCG from "./components/TCG";
 
 function App1() {
   const client = new ApolloClient({
@@ -54,6 +55,7 @@ function App1() {
             <Navbar.Brand>
               <Image
                 src={pokemonlogo}
+                width="320"
                 fluid
                 rounded
                 // className="pokemon__logo"
@@ -121,6 +123,7 @@ function App1() {
           <Route path="/something" element={<Something />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<Home1 />} />
+          <Route path="/TCG" element={<TCG />} />
         </Routes>
       </div>
 

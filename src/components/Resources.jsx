@@ -1,10 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import TCG from "./TCG";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Card from "react-bootstrap/Card";
+import pokemon101 from "./pokemon-101.png";
+import tradingcards from "./trading-cards.png";
+import regions from "./regions.png";
+import pokemoncafe from "./pokemon-cafe.png";
 import { LoremIpsum } from "react-lorem-ipsum";
 
 // need to group all card specific css into one class to declutter
@@ -12,17 +18,7 @@ import { LoremIpsum } from "react-lorem-ipsum";
 
 const Resources = () => {
   return (
-    // <Container
-    //   style={{
-    //     backgroundColor: "#FFDE00",
-    //   }}
-    //   className="border border-dark"
-    //   // class="w-auto"
-    // >
     <div className="py-3 bg-light">
-      {/* <Card className="text-center my-3 py-2 border border-dark">
-        <Card.Body>This is some text within a card body.</Card.Body>
-      </Card> */}
       <Container className="py-5 border border-4 bg-dark">
         <p class="text-center text-white">
           <LoremIpsum
@@ -38,15 +34,11 @@ const Resources = () => {
         {/* <Row> */}
         <Col className="py-4 px-2">
           <Card style={{ width: "18rem" }} className="h-100">
-            <Card.Img
-              variant="top"
-              src="https://picsum.photos/id/201/320/200"
-            />
+            <Card.Img variant="top" src={pokemon101} />
             <Card.Body>
-              <Card.Title>FAQ Pokemon 101</Card.Title>
+              <Card.Title>Pokemon 101</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                A parent's guide to Pokemon. What are pokemon?
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -54,8 +46,10 @@ const Resources = () => {
                 type="button"
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
+                // as={Link}
+                // to=""
               >
-                Go somewhere
+                Go learn about Pokemon
               </Button>
             </Card.Footer>
             {/* </Card.Body> */}
@@ -64,15 +58,37 @@ const Resources = () => {
 
         <Col className="py-4 px-2">
           <Card style={{ width: "18rem" }} className="h-100">
-            <Card.Img
-              variant="top"
-              src="https://picsum.photos/id/201/320/200"
-            />
+            <Card.Img variant="top" src={tradingcards} />
             <Card.Body>
               <Card.Title>Pokemon Trading Card Game TCG </Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                From collecting cards, types of cards and building decks - a
+                guide for how to play the Pokemon Trading Card Game.
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <Button
+                type="button"
+                class="btn btn-primary w-100"
+                style={{ width: "16rem" }}
+                as={Link}
+                to="/tcg"
+              >
+                Go learn about Cards
+              </Button>
+            </Card.Footer>
+            {/* </Card.Body> */}
+          </Card>
+        </Col>
+
+        <Col className="py-4 px-2">
+          <Card style={{ width: "18rem" }} className="h-100">
+            <Card.Img variant="top" src={regions} />
+            <Card.Body>
+              <Card.Title>Pokemon Universe</Card.Title>
+              <Card.Text>
+                9 regions; Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola,
+                Galar, and Paldea.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -81,7 +97,7 @@ const Resources = () => {
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
               >
-                Go somewhere
+                Go see the maps
               </Button>
             </Card.Footer>
             {/* </Card.Body> */}
@@ -95,10 +111,10 @@ const Resources = () => {
               src="https://picsum.photos/id/201/320/200"
             />
             <Card.Body>
-              <Card.Title>The World of Pokemon</Card.Title>
+              <Card.Title>Pokemon Media</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                From anime, manga, television shows, films and video games -
+                there are plently of ways to explore Pokemon.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -107,7 +123,7 @@ const Resources = () => {
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
               >
-                Go somewhere
+                Go Meet the Cast
               </Button>
             </Card.Footer>
             {/* </Card.Body> */}
@@ -116,15 +132,12 @@ const Resources = () => {
 
         <Col className="py-4 px-2">
           <Card style={{ width: "18rem" }} className="h-100">
-            <Card.Img
-              variant="top"
-              src="https://picsum.photos/id/201/320/200"
-            />
+            <Card.Img variant="top" src={pokemoncafe} />
             <Card.Body>
-              <Card.Title>Pokemon Shows</Card.Title>
+              <Card.Title>Pokemon Centers</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                What is the difference between Pokemon Centres and Pokemon
+                Stores?
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -133,24 +146,20 @@ const Resources = () => {
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
               >
-                Go somewhere
+                Go inside
               </Button>
             </Card.Footer>
-            {/* </Card.Body> */}
           </Card>
         </Col>
 
         <Col className="py-4 px-2">
           <Card style={{ width: "18rem" }} className="h-100">
-            <Card.Img
-              variant="top"
-              src="https://picsum.photos/id/201/320/200"
-            />
+            <Card.Img variant="top" src={pokemoncafe} />
             <Card.Body>
               <Card.Title>Pokemon Cafe</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Eat, drink and be merry. Welcome to the first-ever official
+                Pokémon Cafe.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -159,17 +168,13 @@ const Resources = () => {
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
               >
-                Go somewhere
+                Go find out more
               </Button>
             </Card.Footer>
-            {/* </Card.Body> */}
           </Card>
         </Col>
-        {/* </Row> */}
       </Container>
     </div>
-
-    // </Container> "py-5 mt-5 bg-dark"
   );
 };
 
