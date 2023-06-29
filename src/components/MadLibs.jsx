@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import WordForm from "./WordForm.js";
 import Story from "./Story.js";
 import MadLibsGen from "./MadLibsGen.js";
+import Container from "react-bootstrap/Container";
 
 class MadLibs extends Component {
   state = {
@@ -65,26 +66,28 @@ class MadLibs extends Component {
     console.log(this.state.selectedMadLibGen);
 
     return (
-      <div className="MadLibs">
-        <h1>Mad Libs page</h1>
-        <h2>Select a Madlib</h2>
+      <Container>
+        <div className="MadLibs">
+          <h1>Mad Libs page</h1>
+          <h2>Select a Madlib</h2>
 
-        <select onChange={(e) => this.changeMadlibSelection(e)}>
-          {this.createMadlibDropdown()}
-          {/* {" "} */}
-        </select>
+          <select onChange={(e) => this.changeMadlibSelection(e)}>
+            {this.createMadlibDropdown()}
+            {/* {" "} */}
+          </select>
 
-        {/* {!this.state.selectedMadLibGen ? this.createMadlibDropdown() : null} */}
-        {/* // if has someting selcted then don'm tdo anything otherwise create the drop down */}
+          {/* {!this.state.selectedMadLibGen ? this.createMadlibDropdown() : null} */}
+          {/* // if has someting selcted then don'm tdo anything otherwise create the drop down */}
 
-        <WordForm
-          words={this.state.selectedMadLibGen.words}
-          onInputChange={this.onWordInputChange}
-        />
-        {this.isStoryComplete() && (
-          <Story text={this.state.selectedMadLibGen.getText()} />
-        )}
-      </div>
+          <WordForm
+            words={this.state.selectedMadLibGen.words}
+            onInputChange={this.onWordInputChange}
+          />
+          {this.isStoryComplete() && (
+            <Story text={this.state.selectedMadLibGen.getText()} />
+          )}
+        </div>
+      </Container>
     );
   }
 }

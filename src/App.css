@@ -1,8 +1,6 @@
 /*.App {
   text-align: center;
-
 }
-
 
 .App-logo {
   height: 10vmin;
@@ -67,6 +65,8 @@
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  height: 100%;
+  position: relative;
 }
 
 *,
@@ -79,6 +79,9 @@ html {
 body {
   /* margin: 20px 0;
   padding: 0 20px; */
+  height: 100%;
+  position: relative;
+  padding-top: 120px;
   line-height: 1;
   font-family: "Segeo UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #202020;
@@ -190,32 +193,24 @@ body {
 }
 
 .container .pokemon__logo {
-  padding: 20px;
-  max-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</Card.Body
-  > <Card.Footer
-  > <Button
-  type="button"
-  class="btn btn-primary w-100"
-  style= {
-   {
-    width: "16rem";
-  }
-}
-> Go somewhere </Button > </Card.Footer > {
-  /* </Card.Body> */
-}
-</Card > </Col > .container .nav_logo {
-  padding: 20px;
+  padding: 10px;
   max-height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.container .nav_logo {
+  padding: 10px;
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .footer {
+  height: 500px;
+} */
 
 /* make responsive for smaller devices */
 

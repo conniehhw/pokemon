@@ -16,7 +16,7 @@ const About = () => {
           <Col sm={7}>
             <Image
               // src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg"
-              src="https://picsum.photos/900/900"
+              src="https://picsum.photos/500/500"
               fluid
               rounded
               classNmame=""

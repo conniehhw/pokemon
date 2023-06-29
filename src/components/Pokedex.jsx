@@ -42,6 +42,7 @@
 import React from "react";
 import { PokemonsContainer } from "./PokemonsContainer";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import Container from "react-bootstrap/Container";
 
 const Pokedex = () => {
   const client = new ApolloClient({
@@ -51,10 +52,14 @@ const Pokedex = () => {
 
   return (
     <main className="App-home">
-      <div>Pokedex page</div>
-      <ApolloProvider client={client}>
-        <PokemonsContainer />
-      </ApolloProvider>
+      <Container>
+        <div>
+          Pokedex page
+          <ApolloProvider client={client}>
+            <PokemonsContainer />
+          </ApolloProvider>
+        </div>
+      </Container>
     </main>
   );
 };

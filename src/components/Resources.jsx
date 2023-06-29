@@ -46,8 +46,8 @@ const Resources = () => {
                 type="button"
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
-                // as={Link}
-                // to=""
+                as={Link}
+                to="/pokemon101"
               >
                 Go learn about Pokemon
               </Button>
@@ -96,6 +96,8 @@ const Resources = () => {
                 type="button"
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
+                as={Link}
+                to="/regions"
               >
                 Go see the maps
               </Button>
@@ -122,6 +124,8 @@ const Resources = () => {
                 type="button"
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
+                as={Link}
+                to="/media"
               >
                 Go Meet the Cast
               </Button>
@@ -134,7 +138,7 @@ const Resources = () => {
           <Card style={{ width: "18rem" }} className="h-100">
             <Card.Img variant="top" src={pokemoncafe} />
             <Card.Body>
-              <Card.Title>Pokemon Centers</Card.Title>
+              <Card.Title>Pokemon Centres</Card.Title>
               <Card.Text>
                 What is the difference between Pokemon Centres and Pokemon
                 Stores?
@@ -145,6 +149,8 @@ const Resources = () => {
                 type="button"
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
+                as={Link}
+                to="/centres"
               >
                 Go inside
               </Button>
@@ -167,6 +173,8 @@ const Resources = () => {
                 type="button"
                 class="btn btn-primary w-100"
                 style={{ width: "16rem" }}
+                as={Link}
+                to="/cafe"
               >
                 Go find out more
               </Button>

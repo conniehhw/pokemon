@@ -31,7 +31,12 @@ import Pokedex from "./components/Pokedex";
 import MadLibs from "./components/MadLibs";
 import Resources from "./components/Resources";
 import Something from "./components/Something";
+import Pokemon101 from "./components/Pokemon101";
 import TCG from "./components/TCG";
+import Regions from "./components/Regions";
+import Media from "./components/Media";
+import Centres from "./components/Centres";
+import Cafe from "./components/Cafe";
 
 function App1() {
   const client = new ApolloClient({
@@ -48,14 +53,14 @@ function App1() {
           bg="white"
           // variant="dark"
           expand="lg"
-          sticky="top"
-          className="border border-dark"
+          fixed="top"
+          className="border border-dark my-0 py-0"
         >
-          <Container className="border border-light">
+          <Container className="border border-dark">
             <Navbar.Brand>
               <Image
                 src={pokemonlogo}
-                width="320"
+                width="220"
                 fluid
                 rounded
                 // className="pokemon__logo"
@@ -114,21 +119,25 @@ function App1() {
           </Container>
         </Navbar>
       </header>
-      <div>
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/pokedex" element={<Pokedex />} />
-          <Route path="/madlibs" element={<MadLibs />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/something" element={<Something />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<Home1 />} />
-          <Route path="/TCG" element={<TCG />} />
-        </Routes>
-      </div>
 
-      {/* <main></main> */}
-      <footer class="py-5 mt-5 bg-dark">
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/pokedex" element={<Pokedex />} />
+        <Route path="/madlibs" element={<MadLibs />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/something" element={<Something />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home1 />} />
+        <Route path="/pokemon101" element={<Pokemon101 />} />
+        <Route path="/tcg" element={<TCG />} />
+        <Route path="/regions" element={<Regions />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/centres" element={<Centres />} />
+        <Route path="/cafe" element={<Cafe />} />
+      </Routes>
+
+      {/* <footer class="py-5 mt-5 bg-dark"> */}
+      <footer className="py-5 bg-dark">
         <Container className="px-4 border border-light">
           <p class="text-center text-white">
             Copyright &copy; Your website 2023
