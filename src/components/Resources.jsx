@@ -9,7 +9,7 @@ import Image from "react-bootstrap/Image";
 import Card from "react-bootstrap/Card";
 import pokemon101 from "./pokemon-101.png";
 import tradingcards from "./trading-cards.png";
-import regions from "./regions.png";
+import kanto from "./kanto.png";
 import pokemoncafe from "./pokemon-cafe.png";
 import { LoremIpsum } from "react-lorem-ipsum";
 
@@ -83,12 +83,12 @@ const Resources = () => {
 
         <Col className="py-4 px-2">
           <Card style={{ width: "18rem" }} className="h-100">
-            <Card.Img variant="top" src={regions} />
+            <Card.Img variant="top" src={kanto} />
             <Card.Body>
               <Card.Title>Pokemon Universe</Card.Title>
               <Card.Text>
-                9 regions; Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola,
-                Galar, and Paldea.
+                9 regions in Pokemon world; Kanto, Johto, Hoenn, Sinnoh, Unova,
+                Kalos, Alola, Galar, and Paldea.
               </Card.Text>
             </Card.Body>
             <Card.Footer>

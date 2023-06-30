@@ -11,7 +11,7 @@ const About = () => {
   return (
     <main className="App-home">
       <Container>
-        <Row className="px-4 my-5">
+        <Row className="py-4 my-4">
           {/* px = padding, my=margin */}
           <Col sm={7}>
             <Image
