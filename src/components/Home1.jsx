@@ -18,13 +18,14 @@ const Home1 = () => {
       <Container
         style={{
           backgroundColor: "#FFDE00",
+          borderRadius: "25px",
         }}
         class="w-auto"
       >
-        <Row className="px-4 my-2 border border-dark">
-          {/* px = padding, my=margin */}
+        <Row className="px-4 my-2">
+          {/* border border-dark px = padding, my=margin */}
 
-          <Col sm={5} className="border border-dark text-black">
+          <Col sm={5} className="text-black">
             <h1 class="font-weigh-light" className="mt-4">
               Welcome!
             </h1>
@@ -40,16 +41,16 @@ const Home1 = () => {
             <Button variant="primary">Call to Action</Button>
           </Col>
 
-          <Col sm={7} className="border border-dark">
+          <Col sm={7} className="text-center">
             {/* className="justify-content-md-center"> */}
             <Image
               // src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg"
               // src="https://picsum.photos/900/400"
               src={Welcome}
-              // style={{ width: 500, height: 600 }}
+              style={{ borderRadius: "25px" }}
               // alt="welcome"
               fluid
-              rounded
+
               // className="main-pic"
             />
             {/* mt-4 me-4 ms-4 */}

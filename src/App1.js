@@ -54,9 +54,9 @@ function App1() {
           // variant="dark"
           expand="lg"
           fixed="top"
-          className="border border-dark my-0 py-0"
+          className=" my-0 py-0"
         >
-          <Container className="border border-dark">
+          <Container className="">
             <Navbar.Brand>
               <Image
                 src={pokemonlogo}
@@ -137,7 +137,7 @@ function App1() {
       </Routes>
 
       {/* <footer class="py-5 mt-5 bg-dark"> */}
-      <footer className="py-5 bg-dark">
+      <footer className="py-5 mt-3 bg-dark">
         <Container className="px-4 border border-light">
           <p class="text-center text-white">
             Copyright &copy; Your website 2023

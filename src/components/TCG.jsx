@@ -1,38 +1,106 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Accordion from "react-bootstrap/Accordion";
+import LoremIpsum from "react-lorem-ipsum";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 
 const Tcg = () => {
   return (
-    <Container>
-      <Accordion defaultActiveKey={["0"]} alwaysOpen>
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>What are Pokemon Cards?</Accordion.Header>
-          <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Accordion.Body>
-        </Accordion.Item>
+    <div>
+      <Container>
+        {/* <Row className=" py-4 my-4 border border-dark">
+          <Col>1 of 3</Col>
+          <Col xs={6}>2 of 3 (wider)</Col>
+          <Col>3 of 3</Col>
+        </Row>
+        <Row className="py-4 my-4 border border-dark">
+          <Col>1 of 3</Col>
+          <Col xs={5}>2 of 3 (wider)</Col>
+          <Col>3 of 3</Col>
+        </Row> */}
 
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>How do you play?</Accordion.Header>
-          <Accordion.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-    </Container>
+        <Row
+          className="py-4 my-4"
+          style={{ backgroundColor: "#4DAD5B", borderRadius: "25px" }}
+        >
+          <Col sm={5} className="text-center border border-dark">
+            <Image
+              src="https://picsum.photos/200/300"
+              fluid
+              rounded
+              className=""
+            />
+          </Col>
+          <Col sm={7} className="text-left py-4 my-4 border border-dark">
+            <h1 class="font-weight-light">Pokemon Cards</h1>
+            <p>
+              <LoremIpsum
+                p={2}
+                avgWordsPerSentence={5}
+                avgSentencesPerParagraph={4}
+              />
+            </p>
+          </Col>
+        </Row>
+
+        <Row
+          className="py-4 my-4"
+          style={{ backgroundColor: "#E6BC2F", borderRadius: "25px" }}
+        >
+          <Col sm={7} className="text-left py-4 my-4 border border-dark">
+            <h1 class="font-weight-light">Pokemon Cards</h1>
+            <p>
+              <LoremIpsum
+                p={1}
+                avgWordsPerSentence={5}
+                avgSentencesPerParagraph={4}
+              />
+            </p>
+          </Col>
+          <Col sm={5} className="text-center border border-dark">
+            <Image
+              src="https://picsum.photos/400/300"
+              fluid
+              rounded
+              className=""
+            />
+          </Col>
+        </Row>
+
+        <Row
+          className="py-4 my-4"
+          style={{ backgroundColor: "#30A7D7", borderRadius: "25px" }}
+        >
+          <Col sm={4} className="text-center border border-dark">
+            <Image
+              src="https://picsum.photos/250/400"
+              fluid
+              rounded
+              className=""
+            />
+          </Col>
+          <Col sm={4} className="text-left py-4 my-4 border border-dark">
+            <h1 class="font-weight-light">Pokemon Cards</h1>
+            <p>
+              <LoremIpsum
+                p={1}
+                avgWordsPerSentence={5}
+                avgSentencesPerParagraph={4}
+              />
+            </p>
+          </Col>
+          <Col sm={4} className="text-center border border-dark">
+            <Image
+              src="https://picsum.photos/250/400"
+              fluid
+              rounded
+              className=""
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

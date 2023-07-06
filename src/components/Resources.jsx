@@ -115,8 +115,8 @@ const Resources = () => {
             <Card.Body>
               <Card.Title>Pokemon Media</Card.Title>
               <Card.Text>
-                From anime, manga, television shows, films and video games -
-                there are plently of ways to explore Pokemon.
+                From books, television shows, films to video games - there are
+                plently of ways to explore the Pokemon Universe.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
