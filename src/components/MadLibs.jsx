@@ -70,6 +70,15 @@ class MadLibs extends Component {
         <div className="MadLibs">
           <h1>Mad Libs page</h1>
           <h2>Select a Madlib</h2>
+          <p>
+            Choose a story and fill in the boxes and be ready for a silly time!
+          </p>
+          <p>
+            A Noun: A person, place or thing. Example: "Pink panther", "School",
+            "Lunch box". A Verb: An action word. Example: "Run", "Jump",
+            "Dance".
+          </p>
+          <br></br>
 
           <select onChange={(e) => this.changeMadlibSelection(e)}>
             {this.createMadlibDropdown()}
@@ -83,9 +92,11 @@ class MadLibs extends Component {
             words={this.state.selectedMadLibGen.words}
             onInputChange={this.onWordInputChange}
           />
-          {this.isStoryComplete() && (
-            <Story text={this.state.selectedMadLibGen.getText()} />
-          )}
+          <div>
+            {this.isStoryComplete() && (
+              <Story text={this.state.selectedMadLibGen.getText()} />
+            )}
+          </div>
         </div>
       </Container>
     );

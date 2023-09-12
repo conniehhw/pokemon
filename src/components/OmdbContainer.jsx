@@ -9,6 +9,8 @@ import MovieDetail from "./MovieDetail";
 import API from "../utils/API";
 import { PokemonsContainer } from "./PokemonsContainer";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { Pokemon } from "./Pokemon";
+import logo from "./1.png";
 
 const OmdbContainer = () => {
   // Set state for the search result and the search query
@@ -63,7 +65,7 @@ const OmdbContainer = () => {
     <Container>
       <Row>
         <Col size="md-8">
-          <Card heading={Title || "Search for a Movie to Begin"}>
+          <Card heading={Title || "Search for a Pokemon to Begin"}>
             {Title ? (
               <MovieDetail
                 name={Name}
@@ -77,11 +79,24 @@ const OmdbContainer = () => {
             ) : (
               <h3>No Results to Display</h3>
             )}
+            <div className="pokemon">
+              <div className="pokemon_name">
+                <p>Name: {result.name}</p>
+              </div>
+              <div className="pokemon_id">
+                <p>Id: {result.id}</p>
+              </div>
 
-            <h3>Name: {result.name}</h3>
-            {/* <h3>Type: {result.types[0].type.name}</h3>
-            <h3>Ability: {result.abilities[0].ability.name}</h3>
-            <h3>Moves: {result.moves[0].move.name}</h3> */}
+              <p>Id: {result.id}</p>
+              <h3>Name: {result.name}</h3>
+              {/* <h3>Name: {result.sprites.front_default}</h3> */}
+
+              <img src={logo} alt="logo" />
+              <h3>Type: {result.types[0].type.name}</h3>
+
+              <h3>Ability: {result.abilities[0].ability.name}</h3>
+              <h3>Moves: {result.moves[0].move.name}</h3>
+            </div>
             {/* <img
               alt={result}
               className="img-fluid"

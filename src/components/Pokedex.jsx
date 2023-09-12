@@ -50,6 +50,7 @@ const Pokedex = () => {
     cache: new InMemoryCache(),
   });
 
+  // add search form
   return (
     <main className="App-home">
       <Container>

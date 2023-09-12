@@ -11,6 +11,8 @@ import pokemon101 from "./pokemon-101.png";
 import tradingcards from "./trading-cards.png";
 import kanto from "./kanto.png";
 import pokemoncafe from "./pokemon-cafe.png";
+import pokemoncentre from "./pokemon-centre.png";
+import pokemonvggame from "./pokemon-vgame.png";
 import { LoremIpsum } from "react-lorem-ipsum";
 
 // need to group all card specific css into one class to declutter
@@ -19,18 +21,33 @@ import { LoremIpsum } from "react-lorem-ipsum";
 const Resources = () => {
   return (
     <div className="py-3 bg-light">
-      <Container className="py-5 border border-4 bg-dark">
+      <Container
+        style={{
+          backgroundColor: "#FFDE00",
+          borderRadius: "25px",
+        }}
+        class="w-auto"
+      >
+        <Row className="px-4 my-1">
+          <h3>Resources for Parents and Guardians</h3>
+        </Row>
+      </Container>
+      {/* <Container
+        className="py-3 border border-4 border-light bg-dark"
+        style={{ borderRadius: "25px" }}
+      >
         <p class="text-center text-white">
+          Resources for Parents And Guardians
           <LoremIpsum
-            p={1}
+            p={1}x
             avgWordsPerSentence={8}
             avgSentencesPerParagraph={4}
           />
         </p>
-      </Container>
+      </Container> */}
 
       {/* // Resource Options */}
-      <Container className="py-2 px-2 my-3 border border-4 bg-primary">
+      <Container className="py-2 px-2 my-3 border border-4">
         {/* <Row> */}
         <Col className="py-4 px-2">
           <Card style={{ width: "18rem" }} className="h-100">
@@ -108,10 +125,7 @@ const Resources = () => {
 
         <Col className="py-4 px-2">
           <Card style={{ width: "18rem" }} className="h-100">
-            <Card.Img
-              variant="top"
-              src="https://picsum.photos/id/201/320/200"
-            />
+            <Card.Img variant="top" src={pokemonvggame} />
             <Card.Body>
               <Card.Title>Pokemon Media</Card.Title>
               <Card.Text>
@@ -136,7 +150,7 @@ const Resources = () => {
 
         <Col className="py-4 px-2">
           <Card style={{ width: "18rem" }} className="h-100">
-            <Card.Img variant="top" src={pokemoncafe} />
+            <Card.Img variant="top" src={pokemoncentre} />
             <Card.Body>
               <Card.Title>Pokemon Centres</Card.Title>
               <Card.Text>
@@ -181,6 +195,14 @@ const Resources = () => {
             </Card.Footer>
           </Card>
         </Col>
+      </Container>
+      <Container>
+        <Row className="px-4 my-2">
+          <h6>
+            A special call out 'Thank You' to trainer Ryan for sharing his
+            expertise for this section!
+          </h6>
+        </Row>
       </Container>
     </div>
   );

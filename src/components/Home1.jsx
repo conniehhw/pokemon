@@ -31,14 +31,16 @@ const Home1 = () => {
             </h1>
             <p class="mt-4">
               {/* mt= margin top */}
-              <LoremIpsum
+              So you want to be a pokemon trainer? Follow along with Ash and
+              Pikachu and start your journey.
+              {/* <LoremIpsum
                 p={1}
                 avgWordsPerSentence={6}
                 avgSentencesPerParagraph={4}
-              />
+              /> */}
             </p>
             <br></br>
-            <Button variant="primary">Call to Action</Button>
+            <Button variant="primary">Let's Go!</Button>
           </Col>
 
           <Col sm={7} className="text-center">

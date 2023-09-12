@@ -138,7 +138,8 @@ function App1() {
 
       {/* <footer class="py-5 mt-5 bg-dark"> */}
       <footer className="py-5 mt-3 bg-dark">
-        <Container className="px-4 border border-light">
+        <Container>
+          {/* <Container className="px-4 border border-light"> */}
           <p class="text-center text-white">
             Copyright &copy; Your website 2023
           </p>

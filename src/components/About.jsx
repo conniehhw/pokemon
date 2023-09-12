@@ -38,14 +38,15 @@ const About = () => {
               Hello! This website is designed for the younger Pokémon fans, ages
               5 - 8. It features activities such as games, searching the
               pokedex, learning to draw their fav characters and more.
-              <p>
-                Accompanying these activities is also a guide for parents, to
-                arm you with the knowledge you need to accompany your little
-                ones as they go on their first Pokemon journey.
-              </p>
             </p>
             <br></br>
-            <Button variant="outline-primary">Let's Go!</Button>
+            <p>
+              Accompanying these activities is also a guide for parents, to arm
+              you with the knowledge you need to accompany your little ones as
+              they go on their first Pokemon journey.
+            </p>
+            <br></br>
+            <Button variant="primary">Let's Go!</Button>
           </Col>
         </Row>
       </Container>

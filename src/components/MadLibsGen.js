@@ -26,7 +26,7 @@ export default [
       do this with a friend or even with ${"noun_1"} at a/an ${"adjective_1"} Gym nearby. Think
       of it like training a/an ${"noun_2"}! Only when you've trained enough should you challenge
       another ${"noun_3"} for real. After all that work, it would be ${"adjective_2"} for someone
-      to come along and take your ${"noun_4"} away!`;
+      // to come along and take your ${"noun_4"} away!`;
     },
 
     words: [

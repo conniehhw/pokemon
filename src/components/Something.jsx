@@ -4,13 +4,28 @@ import OmdbContainer from "./OmdbContainer";
 
 const Something = () => {
   return (
-    <main className="App-home">
+    <div>
       <Container>
         <div>Something Page</div>
         <OmdbContainer />
       </Container>
-    </main>
+    </div>
   );
 };
 
 export default Something;
+
+//   }
+
+//     (
+//     <main className="App-home">
+//       <Container>
+//         <div>Something Page</div>
+//         <OmdbContainer />
+//       </Container>
+//     </main>
+//   );
+
+// };
+
+// export default Something;

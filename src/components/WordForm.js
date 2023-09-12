@@ -19,13 +19,19 @@ class WordForm extends Component {
     for (let i = 0; i < this.props.words.length; i++) {
       let word = this.props.words[i];
       output.push(
-        <div>
+        <div className="d-grid gap-0.5">
           <input
             onChange={(event) => this.onInputChange(event, word.key, i)}
             type="text"
             key={word.key}
             placeholder={word.label}
+            style={{
+              backgroundColor: "#FFDE00",
+              borderRadius: "25px",
+            }}
+            className="p-3 bg-light border"
           ></input>
+
           <br></br>
         </div>
       );
@@ -40,7 +46,8 @@ class WordForm extends Component {
 
     return (
       <div>
-        <h1>This is the word form</h1>
+        <br></br>
+        <h2>Type in your words here in this form</h2>
         {this.createAllInputs()}
       </div>
     );
